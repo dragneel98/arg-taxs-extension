@@ -50,9 +50,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align:start;
-  }  
+  } 
+  #precioEnPesos,#pais,#ganancias,#bienesPersonales,#result{
+    font-weight: bold;
+  } 
   h2{
     font-size: 2em;
     text-align: center;
