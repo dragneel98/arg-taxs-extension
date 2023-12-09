@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "calculadora de compras en el exterior",
+    "version": "1.0",
+    "description":"una herramienta que sera de mucha ayuda para tus compras en el exterior",
+    "icons":{
+        "128":"dolar.png"
+    },
+    "action":{
+        "default_popup":"popup.html"
+    }
+}
