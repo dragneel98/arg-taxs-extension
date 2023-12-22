@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
     async function mostrarDolar() {
         const dolar = await apiCall();
         const dolarElement = document.getElementById('dolar');
-        dolarElement.innerHTML = `${dolar} ars = 1 dolar`
+        dolarElement.innerHTML = `${dolar} ars  =  1 dolar`
         return dolar
     }
-
+    const dolar = mostrarDolar()
     //calculo de los impuestos
     function calculateTaxAmount(amount, dolar) {
         const pais = 0.30;

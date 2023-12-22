@@ -1,14 +1,23 @@
 @font-face {
-    font-family: "roboto";
-    src: url("/Roboto/Roboto-Light.ttf");
+  font-family: "DotMatrix";
+  src: url("/retro-fonts/DOTMBold.TTF");
 }
+@font-face {
+  font-family: "NDot";
+  src: url("/retro-fonts/Ndot-normal-400-100.otf");
+}
+@font-face {
+  font-family: "LetteraMono";
+  src: url("/retro-fonts/Lettera\ Mono\ LL\ Cond\ Light-normal-400-100.otf");
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 body {
-    font-family: "roboto";
+    font-family: "LetteraMono";
     text-align: center;
     /* background-color: #f0f0f0; */
     padding: 0;
@@ -21,42 +30,56 @@ body {
     width: 300px;
   }
   .p-container {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
     grid-column-gap: 0;
     grid-row-gap: 0;
-    /* justify-items:s; */
+    /* justify-content: space-between; */
     align-items: center;
+    padding: 1em;
+    text-transform: uppercase;
   }
   
   input {
+    font-family: "NDot";
     margin-bottom: 10px;
-    background-color: #1ea825;
-    color: white;
     font-size: 2em;
     height: 3em;
-    width: 100%;
+    width: 100vw;
+    padding: 0 1em;
+    border: none;
+    background: linear-gradient(to right, #888888, #000000); /* Cambia los colores de gradiente según prefieras */
+    color: white; 
   }
   input::placeholder{
     color: white;
   }
 
   #result {
-    /* margin-top: 20px; */
     font-weight: bold;
   }
   p{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:start;
     font-size: 1.2em;
     text-align:start;
+    margin: 10px;
   } 
   #precioEnPesos,#pais,#ganancias,#bienesPersonales,#result{
     font-weight: bold;
+    font-family: "NDot";
+    /* font-family: "DotMatrix"; */
+    font-size: 1.7em;
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 1em;
   } 
   h2{
+    font-family: "NDot";
+    /* font-family: "LetteraMono"; */
+    font-family: "DotMatrix";
     font-size: 2em;
     text-align: center;
   }
