@@ -31,17 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const dolar = mostrarDolar()
     //calculo de los impuestos
     function calculateTaxAmount(amount, dolar) {
-        const pais = 0.30;
-        const ganancias = 1;
-        const bienesPersonales = 0.25;
+        const pais = 0.08;
+        const ganancias = 0.3;
+        const iva = 0.21;
         const precioEnPesos = amount * dolar;
-        const precioFinal = (precioEnPesos * (pais + ganancias + bienesPersonales)) + precioEnPesos
+        // const precioFinal = (precioEnPesos * (pais + ganancias + bienesPersonales)) + precioEnPesos
         return {
             pais: pais * precioEnPesos,
             ganancias: ganancias * precioEnPesos,
-            bienesPersonales: bienesPersonales * precioEnPesos,
+            iva: iva * precioEnPesos,
             precioEnPesos,
-            precioFinal
+            // precioFinal
         }
     }
 
@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!isNaN(amount)) {
             try {
                 if (dolar !== null) {
-                    const { pais, ganancias, bienesPersonales, precioEnPesos, precioFinal } = calculateTaxAmount(amount, dolar);
-
+                    const { pais, ganancias, iva: bienesPersonales, precioEnPesos } = calculateTaxAmount(amount, dolar);
+                    const precioFinal = pais + ganancias + bienesPersonales + precioEnPesos
                     const precioEnPesosElement = document.getElementById('precioEnPesos');
                     const resultElement = document.getElementById('result');
                     const paisElement = document.getElementById('pais');

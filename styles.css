@@ -51,6 +51,7 @@ body {
     border: none;
     background: linear-gradient(to right, #888888, #000000); /* Cambia los colores de gradiente según prefieras */
     color: white; 
+    outline: none;
   }
   input::placeholder{
     color: white;
