@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     precioEnPesosElement.innerHTML = ` ${precioEnPesos}`
                     paisElement.innerHTML = ` ${pais}`
                     gananciasElement.innerHTML = ` ${ganancias}`
-                    bienesPersonalesElement.innerHTML = ` ${bienesPersonales}`
+                    bienesPersonalesElement.innerHTML = ` ${bienesPersonales.toFixed(2)}`
                     resultElement.innerHTML = ` ${precioFinal.toFixed(1)}`;
                 } else {
                     throw new Error('Valor del dólar no disponible');
